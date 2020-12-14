@@ -3,7 +3,7 @@ Decorator that enforces Type hints on functions (Python)
 
 # Example Usage
 main.py
-```
+```py
 from enforceTH import enforceType
 
 
