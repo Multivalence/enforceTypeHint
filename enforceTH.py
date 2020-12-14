@@ -6,7 +6,6 @@ def enforceType(func):
 	def wrapper(*args):
 			wrapper.has_been_called = True
 			x = func.__annotations__
-			print(x)
 			t = [x[i] for i in x if i != 'return']
 
 			if len(args) != len(t):
