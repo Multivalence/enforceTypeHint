@@ -30,7 +30,7 @@ def enforceType(func):
 			
 
 			if not isinstance(RV, ReturnValue):
-				raise TypeError(f"Expected function to return {ReturnValue}. Got {type(RV)} instead.")
+				raise SyntaxWarning(f"Expected function to return {ReturnValue}. Got {type(RV)} instead.")
 			
 			return RV
 
