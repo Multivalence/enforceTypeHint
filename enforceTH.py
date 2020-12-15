@@ -8,6 +8,7 @@ def enforceType(func):
 			x = func.__annotations__
 			t = [x[i] for i in x if i != 'return']
 
+
 			if len(args) != len(t):
 				raise TypeError("Missing required positional arguments and/or annotations.")
 
@@ -28,7 +29,7 @@ def enforceType(func):
 			except Exception as e:
 				raise Exception(e)
 			
-
+			ReturnValue = type(ReturnValue) if ReturnValue == None else ReturnValue
 			if not isinstance(RV, ReturnValue):
 				raise SyntaxWarning(f"Expected function to return {ReturnValue}. Got {type(RV)} instead.")
 			
