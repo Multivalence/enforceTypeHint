@@ -15,5 +15,6 @@ print(doubler("Hello",3)) # Fails
 print(doubler(3,3)) # Successful
 
 ```
+**Note** that decorator currently does not work within classes but will in the future.
 
 
